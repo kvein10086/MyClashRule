@@ -23,7 +23,10 @@ jobs:
           sed "s/- '/DOMAIN-SUFFIX,/g" AWAvenue-Ads-Rule-Clash.yaml | sed "s/'//g" > temp.list
           
           # Step 2: Remove content above the first DOMAIN-SUFFIX
-          sed -n '/DOMAIN-SUFFIX/,$p' temp.list > Test.list
+          sed -n '/DOMAIN-SUFFIX/,$p' temp.list > temp2.list
+          
+          # Step 3: Remove leading spaces from each line
+          sed 's/^ *//' temp2.list > Test.list
 
       - name: Display result
         run: |
