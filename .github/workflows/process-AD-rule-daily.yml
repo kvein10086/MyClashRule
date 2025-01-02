@@ -45,24 +45,25 @@ jobs:
             echo "文件没有变更。" > diff_output.txt
           fi
 
-      - name: 更新 README.md 文件
+      - name: 更新 README.md 中的日志部分
         run: |
-          # 如果 README.md 文件不存在，先创建一个文件头
+          # 定义日志头标记
+          LOG_START="## 广告规则更新日志"
+          # 生成最新的日志内容
+          LOG_CONTENT="### $(date '+%Y-%m-%d %H:%M:%S')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
+
+          # 如果 README.md 文件不存在，则创建一个
           if [ ! -f README.md ]; then
             echo "# MyClashRule" > README.md
-            echo "这是一个包含 [秋风广告规则](https://awavenue.top/) 的 Clash 规则。" >> README.md
+            echo "本仓库包含 AWAvenue 的 Clash 规则。" >> README.md
             echo "" >> README.md
-            echo "## 广告规则更新日志" >> README.md
+            echo "${LOG_START}" >> README.md
             echo "" >> README.md
+            echo -e "${LOG_CONTENT}" >> README.md
+          else
+            # 使用 sed 替换日志部分
+            sed -i "/${LOG_START}/,/\n#/c\\${LOG_START}\n\n${LOG_CONTENT}" README.md
           fi
-
-          # 追加新的日志记录到 README.md
-          echo "### $(date '+%Y-%m-%d %H:%M:%S')" >> README.md
-          echo "" >> README.md
-          echo "\`\`\`diff" >> README.md
-          cat diff_output.txt >> README.md
-          echo "\`\`\`" >> README.md
-          echo "" >> README.md
 
       - name: Commit and push changes
         env:
@@ -74,5 +75,5 @@ jobs:
           
           # 添加并提交文件
           git add AWAvenue-Ads-Rule.list README.md
-          git commit -m "更新规则文件和更新日志"
+          git commit -m "更新规则文件和最新日志"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/kvein10086/MyClashRule.git HEAD:main
