@@ -23,11 +23,13 @@ jobs:
           sed "s/- '/DOMAIN-SUFFIX,/g" AWAvenue-Ads-Rule-Clash.yaml | sed "s/'//g" > Test.list
 
       - name: Commit and push changes
+        env:
+          PAT: ${{ secrets.PAT }} # 使用配置的 PAT
         run: |
           # 配置 git 用户信息
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # 将 Test.list 添加到版本控制并推送
+          # 添加并推送更改
           git add Test.list
           git commit -m "Update Test.list file"
-          git push
+          git push https://x-access-token:${PAT}@github.com/kvein10086/MyClashRule.git HEAD:main
