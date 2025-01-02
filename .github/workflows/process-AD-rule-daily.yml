@@ -8,7 +8,7 @@ on:
 jobs:
   process-rule:
     runs-on: ubuntu-latest  # 选择一个合适的虚拟环境
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3  # 拉取代码仓库中的文件
@@ -20,7 +20,15 @@ jobs:
       - name: Process the file
         run: |
           # Step 1: Replace '- ' with 'DOMAIN-SUFFIX,' and remove single quotes
-          sed "s/- '/DOMAIN-SUFFIX,/g" AWAvenue-Ads-Rule-Clash.yaml | sed "s/'//g" > Test.list
+          sed "s/- '/DOMAIN-SUFFIX,/g" AWAvenue-Ads-Rule-Clash.yaml | sed "s/'//g" > temp.list
+          
+          # Step 2: Remove content above the first DOMAIN-SUFFIX
+          sed -n '/DOMAIN-SUFFIX/,$p' temp.list > Test.list
+
+      - name: Display result
+        run: |
+          # Output the result for verification
+          cat Test.list
 
       - name: Commit and push changes
         env:
