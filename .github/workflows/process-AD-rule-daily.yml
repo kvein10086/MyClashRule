@@ -25,22 +25,54 @@ jobs:
           # Step 2: Remove content above the first DOMAIN-SUFFIX
           sed -n '/DOMAIN-SUFFIX/,$p' temp.list > temp2.list
           
-          # Step 3: Remove leading spaces from each line
-          sed 's/^ *//' temp2.list > Test.list
+          # Step 3: Remove leading spaces from each line and save to AWAvenue-Ads-Rule.list
+          sed 's/^ *//' temp2.list > AWAvenue-Ads-Rule.list
 
-      - name: Display result
+      - name: Compare files
+        id: compare
         run: |
-          # Output the result for verification
-          cat Test.list
+          # 检查仓库中是否有旧的规则文件
+          if git show HEAD:AWAvenue-Ads-Rule.list > old_list.txt 2>/dev/null; then
+            # 如果存在旧文件，进行对比
+            diff old_list.txt AWAvenue-Ads-Rule.list > diff_output.txt || true
+          else
+            # 如果没有旧文件，记录为 "这是第一次运行"
+            echo "文件不存在，直接生成新的规则文件。" > diff_output.txt
+          fi
+
+          # 如果 diff_output.txt 文件为空，说明文件没有变更
+          if [ ! -s diff_output.txt ]; then
+            echo "文件没有变更。" > diff_output.txt
+          fi
+
+      - name: 更新 README.md 文件
+        run: |
+          # 如果 README.md 文件不存在，先创建一个文件头
+          if [ ! -f README.md ]; then
+            echo "# MyClashRule" > README.md
+            echo "本仓库包含 AWAvenue 的 Clash 规则。" >> README.md
+            echo "" >> README.md
+            echo "## 更新日志" >> README.md
+            echo "" >> README.md
+          fi
+
+          # 追加新的日志记录到 README.md
+          echo "### $(date '+%Y-%m-%d %H:%M:%S')" >> README.md
+          echo "" >> README.md
+          echo "\`\`\`diff" >> README.md
+          cat diff_output.txt >> README.md
+          echo "\`\`\`" >> README.md
+          echo "" >> README.md
 
       - name: Commit and push changes
         env:
           PAT: ${{ secrets.PAT }} # 使用配置的 PAT
         run: |
-          # 配置 git 用户信息
+          # 配置 Git 用户信息
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          # 添加并推送更改
-          git add Test.list
-          git commit -m "Update Test.list file"
-          git push https://x-access-token:${PAT}@github.com/kvein10086/MyClashRule.git HEAD:main
+          
+          # 添加并提交文件
+          git add AWAvenue-Ads-Rule.list README.md
+          git commit -m "更新规则文件和更新日志"
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/kvein10086/MyClashRule.git HEAD:main
