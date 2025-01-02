@@ -22,7 +22,12 @@ jobs:
           # Step 1: Replace '- ' with 'DOMAIN-SUFFIX,' and remove single quotes
           sed "s/- '/DOMAIN-SUFFIX,/g" AWAvenue-Ads-Rule-Clash.yaml | sed "s/'//g" > Test.list
 
-      - name: Display result
+      - name: Commit and push changes
         run: |
-          # Output the result for verification
-          cat Test.list
+          # 配置 git 用户信息
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          # 将 Test.list 添加到版本控制并推送
+          git add Test.list
+          git commit -m "Update Test.list file"
+          git push
