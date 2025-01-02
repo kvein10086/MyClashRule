@@ -48,8 +48,7 @@ jobs:
       - name: 更新 README.md 中的日志部分
         run: |
           # 定义日志头标记
-          LOG_START="## 广告规则更新日志"
-          # 生成最新的日志内容
+          LOG_START="## 秋风广告规则更新日志"
           LOG_CONTENT="### $(date '+%Y-%m-%d %H:%M:%S')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
 
           # 如果 README.md 文件不存在，则创建一个
@@ -61,8 +60,13 @@ jobs:
             echo "" >> README.md
             echo -e "${LOG_CONTENT}" >> README.md
           else
-            # 使用 sed 替换日志部分
-            sed -i "/${LOG_START}/,/\n#/c\\${LOG_START}\n\n${LOG_CONTENT}" README.md
+            # 替换 README.md 中的日志部分，保留其他内容
+            awk -v log_start="${LOG_START}" -v log_content="${LOG_CONTENT}" '
+              BEGIN {found=0}
+              $0 ~ log_start {found=1; print log_start; print ""; print log_content; next}
+              found && $0 ~ /^#/ && !found {found=0}
+              !found {print}
+            ' README.md > README.tmp && mv README.tmp README.md
           fi
 
       - name: Commit and push changes
@@ -75,5 +79,5 @@ jobs:
           
           # 添加并提交文件
           git add AWAvenue-Ads-Rule.list README.md
-          git commit -m "更新规则文件和最新日志"
+          git commit -m "更新断秋风广告规则文件和最新日志"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/kvein10086/MyClashRule.git HEAD:main
