@@ -2,7 +2,7 @@ name: Process AWAvenue Ads Rule Daily
 
 on:
   schedule:
-    - cron: '0 0 * * *' # 每天的 UTC 时间 00:00 运行一次
+    - cron: '0 16 * * *' # 每天的北京时间 00:00 运行一次 (UTC+8 转 UTC 为 16:00)
   workflow_dispatch: # 手动触发工作流
 
 jobs:
@@ -49,7 +49,7 @@ jobs:
         run: |
           # 定义日志头和尾的标记
           LOG_START="## 广告规则更新日志"
-          LOG_END="##"
+          LOG_END="## 分流规则更新日志"
           # 生成最新的日志内容
           LOG_CONTENT="### $(date '+%Y-%m-%d %H:%M:%S')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
 
