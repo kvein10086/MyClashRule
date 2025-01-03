@@ -49,7 +49,7 @@ jobs:
       - name: 更新 README.md 中的日志部分
         run: |
           # 生成最新的日志内容（以北京时间显示）
-          LOG_CONTENT="### $(date -u '+%Y-%m-%d %H:%M:%S' | awk '{cmd="TZ=Asia/Shanghai date -d '"$0"' +\\"%Y-%m-%d %H:%M:%S\\""; cmd | getline new_time; close(cmd); print new_time}')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
+          LOG_CONTENT="### $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
 
           # 使用日志的明确标识定位并替换对应部分
           awk -v log_start="## 广告规则更新日志" -v log_content="${LOG_CONTENT}" '
