@@ -15,57 +15,56 @@ jobs:
 
       - name: Download AWAvenue-Ads-Rule-Clash.yaml
         run: |
+          # 从远程仓库下载最新的 AWAvenue 广告规则文件
           curl -o AWAvenue-Ads-Rule-Clash.yaml https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml
 
       - name: Process the file
         run: |
-          # Step 1: Replace '- ' with 'DOMAIN-SUFFIX,' and remove single quotes
+          # 第一步：将规则文件中的 '- ' 替换为 'DOMAIN-SUFFIX,'，并移除单引号
           sed "s/- '/DOMAIN-SUFFIX,/g" AWAvenue-Ads-Rule-Clash.yaml | sed "s/'//g" > temp.list
           
-          # Step 2: Remove content above the first DOMAIN-SUFFIX
+          # 第二步：移除规则文件中第一行至首个 'DOMAIN-SUFFIX' 之前的内容
           sed -n '/DOMAIN-SUFFIX/,$p' temp.list > temp2.list
           
-          # Step 3: Remove leading spaces from each line and save to AWAvenue-Ads-Rule.list
+          # 第三步：移除每行前导空格，并保存为最终的规则文件
           sed 's/^ *//' temp2.list > AWAvenue-Ads-Rule.list
 
       - name: Compare files
         id: compare
         run: |
-          # 检查仓库中是否有旧的规则文件
+          # 检查仓库中是否存在旧的规则文件
           if git show HEAD:AWAvenue-Ads-Rule.list > old_list.txt 2>/dev/null; then
-            # 如果存在旧文件，进行对比
+            # 如果存在旧文件，比较新旧规则文件的差异
             diff old_list.txt AWAvenue-Ads-Rule.list > diff_output.txt || true
           else
-            # 如果没有旧文件，记录为 "这是第一次运行"
+            # 如果没有旧文件，记录为第一次运行
             echo "文件不存在，直接生成新的规则文件。" > diff_output.txt
           fi
 
-          # 如果 diff_output.txt 文件为空，说明文件没有变更
+          # 如果没有差异，则记录文件没有变更
           if [ ! -s diff_output.txt ]; then
             echo "文件没有变更。" > diff_output.txt
           fi
 
       - name: 更新 README.md 中的日志部分
         run: |
-          # 定义日志头和尾的标记
-          LOG_START="## 广告规则更新日志"
-          LOG_END="## 分流规则更新日志"
-          # 生成最新的日志内容
-          LOG_CONTENT="### $(date '+%Y-%m-%d %H:%M:%S')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
+          # 生成最新的日志内容（以北京时间显示）
+          LOG_CONTENT="### $(date -u '+%Y-%m-%d %H:%M:%S' | awk '{cmd="TZ=Asia/Shanghai date -d '"$0"' +\\"%Y-%m-%d %H:%M:%S\\""; cmd | getline new_time; close(cmd); print new_time}')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
 
-          # 如果 README.md 文件存在，只保留最新的日志部分
-          awk -v log_start="${LOG_START}" -v log_end="${LOG_END}" -v log_content="${LOG_CONTENT}" '
-            BEGIN {found=0}
-            $0 ~ log_start {found=1; print log_start; print ""; print log_content; next}
-            $0 ~ log_end && found {exit}  # 直接退出以删除旧日志部分
-            !found {print}
+          # 使用日志的明确标识定位并替换对应部分
+          awk -v log_start="## 广告规则更新日志" -v log_content="${LOG_CONTENT}" '
+            BEGIN {in_log=0}
+            $0 ~ log_start {print $0; in_log=1; next}  # 定位日志部分开头
+            in_log && /^### / {print log_content; next}  # 替换从时间开始到 diff 内容
+            in_log && /^```$/ {in_log=0; next}  # 确定结束标识后停止
+            !in_log {print}
           ' README.md > README.tmp && mv README.tmp README.md
 
       - name: Commit and push changes
         env:
           PAT: ${{ secrets.PAT }} # 使用配置的 PAT
         run: |
-          # 配置 Git 用户信息
+          # 配置 Git 用户信息，用于提交到 GitHub
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
