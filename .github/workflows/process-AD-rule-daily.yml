@@ -53,23 +53,13 @@ jobs:
           # 生成最新的日志内容
           LOG_CONTENT="### $(date '+%Y-%m-%d %H:%M:%S')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
 
-          # 如果 README.md 文件不存在，则创建一个
-          if [ ! -f README.md ]; then
-            echo "# MyClashRule" > README.md
-            echo "本仓库包含 AWAvenue 的 Clash 规则。" >> README.md
-            echo "" >> README.md
-            echo "${LOG_START}" >> README.md
-            echo "" >> README.md
-            echo -e "${LOG_CONTENT}" >> README.md
-          else
-            # 如果 README.md 存在，替换日志部分
-            awk -v log_start="${LOG_START}" -v log_end="${LOG_END}" -v log_content="${LOG_CONTENT}" '
-              BEGIN {found=0}
-              $0 ~ log_start {found=1; print log_start; print ""; print log_content; next}
-              $0 ~ log_end && found {found=0}
-              !found {print}
-            ' README.md > README.tmp && mv README.tmp README.md
-          fi
+          # 如果 README.md 文件存在，只保留最新的日志部分
+          awk -v log_start="${LOG_START}" -v log_end="${LOG_END}" -v log_content="${LOG_CONTENT}" '
+            BEGIN {found=0}
+            $0 ~ log_start {found=1; print log_start; print ""; print log_content; next}
+            $0 ~ log_end && found {exit}  # 直接退出以删除旧日志部分
+            !found {print}
+          ' README.md > README.tmp && mv README.tmp README.md
 
       - name: Commit and push changes
         env:
