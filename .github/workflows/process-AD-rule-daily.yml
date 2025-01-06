@@ -20,7 +20,7 @@ jobs:
 
       - name: Process the file
         run: |
-          # 第一步：将规则文件中的 '- ' 替换为 'DOMAIN-SUFFIX,'，并移除单引号
+          # 第一步：将规则文件中的 '- ' 替换为 ''，仅保留网址部分
           sed "s/- '/DOMAIN-SUFFIX,/g" AWAvenue-Ads-Rule-Clash.yaml | sed "s/'//g" > temp.list
           
           # 第二步：移除规则文件中第一行至首个 'DOMAIN-SUFFIX' 之前的内容
@@ -35,7 +35,7 @@ jobs:
           # 检查仓库中是否存在旧的规则文件
           if git show HEAD:AWAvenue-Ads-Rule.list > old_list.txt 2>/dev/null; then
             # 如果存在旧文件，比较新旧规则文件的差异
-            diff old_list.txt AWAvenue-Ads-Rule.list > diff_output.txt || true
+            diff --unchanged-line-format='' --old-line-format='- %L' --new-line-format='+ %L' old_list.txt AWAvenue-Ads-Rule.list > diff_output.txt || true
           else
             # 如果没有旧文件，记录为第一次运行
             echo "文件不存在，直接生成新的规则文件。" > diff_output.txt
@@ -44,23 +44,42 @@ jobs:
           # 如果没有差异，则记录文件没有变更
           if [ ! -s diff_output.txt ]; then
             echo "文件没有变更。" > diff_output.txt
+            echo "no-change" > status.txt
+          else
+            echo "change" > status.txt
           fi
 
+      - name: Skip commit if no changes
+        if: ${{ steps.compare.outputs.status != 'change' }}
+        run: |
+          echo "没有变更，跳过提交和日志更新步骤。"
+
       - name: 更新 README.md 中的日志部分
+        if: ${{ steps.compare.outputs.status == 'change' }}
         run: |
           # 生成最新的日志内容（以北京时间显示）
-          LOG_CONTENT="### $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')\n\n\`\`\`diff\n$(cat diff_output.txt)\n\`\`\`"
+          LOG_CONTENT="### $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M:%S')\n\n移除：\n$(grep '^-' diff_output.txt | sed 's/^- //' | sed 's/^/  /')\n添加：\n$(grep '^+' diff_output.txt | sed 's/^+ //' | sed 's/^/  /')"
 
-          # 使用日志的明确标识定位并替换对应部分
+          # 使用日志的明确标识定位并追加对应部分
           awk -v log_start="## 广告规则更新日志" -v log_content="${LOG_CONTENT}" '
             BEGIN {in_log=0}
             $0 ~ log_start {print $0; in_log=1; next}  # 定位日志部分开头
-            in_log && /^### / {print log_content; next}  # 替换从时间开始到 diff 内容
+            in_log && /^### / {print log_content; next}  # 追加新的日志内容
             in_log && /^```$/ {in_log=0; next}  # 确定结束标识后停止
             !in_log {print}
           ' README.md > README.tmp && mv README.tmp README.md
 
+          # 保留最新的 5 条日志
+          awk -v log_start="## 广告规则更新日志" '
+            BEGIN {in_log=0; log_count=0; max_logs=5}
+            $0 ~ log_start {print $0; in_log=1; next}
+            in_log && /^### / {log_count++; if (log_count > max_logs) {exit}}  # 限制日志条数
+            in_log {print}
+            !in_log {print}
+          ' README.md > README.tmp && mv README.tmp README.md
+
       - name: Commit and push changes
+        if: ${{ steps.compare.outputs.status == 'change' }}
         env:
           PAT: ${{ secrets.PAT }} # 使用配置的 PAT
         run: |
