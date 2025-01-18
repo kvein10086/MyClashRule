@@ -1,6 +1,10 @@
 # MyClashRule
 这是一个包含 [秋风广告规则](https://awavenue.top/) 的 Clash 规则。
 
+```
+https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
+```
+
 ## 广告规则更新日志
 ### 2025-01-06 00:07:22
 
