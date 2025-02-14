@@ -14,6 +14,10 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 分流规则更新日志
 
++ 2025-2-14
+  
+  >  更新文件目录及全球直连规则
+
 + 2025-01-03
 
   > 将google.com分流至美国节点
