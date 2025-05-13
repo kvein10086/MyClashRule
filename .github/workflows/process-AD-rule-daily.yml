@@ -93,8 +93,20 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 确保我们有最新的更改
-          git pull origin main --rebase
+          # 保存当前的更改
+          git stash
+          
+          # 获取最新的远程更改
+          git fetch origin main
+          
+          # 切换到 main 分支
+          git checkout main
+          
+          # 重置到远程状态
+          git reset --hard origin/main
+          
+          # 应用之前保存的更改
+          git stash pop
           
           # 添加并提交文件
           git add Rule/AWAvenue-Ads-Rule.list README.md
@@ -102,7 +114,7 @@ jobs:
           
           # 添加重试机制
           for i in {1..3}; do
-            if git pull origin main --rebase && git push https://x-access-token:${{ secrets.PAT }}@github.com/kvein10086/MyClashRule.git HEAD:main; then
+            if git push https://x-access-token:${{ secrets.PAT }}@github.com/kvein10086/MyClashRule.git HEAD:main; then
               echo "成功推送更改"
               break
             fi
