@@ -7,6 +7,77 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-05-20 00:18:42
+
+```diff
++ DOMAIN-SUFFIX,ad.xiaomi.com
++ DOMAIN-SUFFIX,adkwai.com
++ DOMAIN-SUFFIX,ads-jp.tiktok.com
++ DOMAIN-SUFFIX,ads.flurry.com
++ DOMAIN-SUFFIX,adservice.google.cn
++ DOMAIN-SUFFIX,adukwai.com
++ DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao5.com
++ DOMAIN-SUFFIX,appcloud2.in.zhihu.com
++ DOMAIN-SUFFIX,applvn.com
++ DOMAIN-SUFFIX,ata-sdk-uuid-report.dreport.meituan.net
++ DOMAIN-SUFFIX,cdn.ad.xiaomi.com
++ DOMAIN-SUFFIX,dutils.com
++ DOMAIN-SUFFIX,g-adnet.hiaiabc.com
++ DOMAIN-SUFFIX,g-staic.ganjingworld.com
++ DOMAIN-SUFFIX,getui.net
++ DOMAIN-SUFFIX,globalapi.ad.xiaomi.com
++ DOMAIN-SUFFIX,googleads.g.doubleclick.com
++ DOMAIN-SUFFIX,googletagservices.com
+- DOMAIN-SUFFIX,graph.facebook.com
++ DOMAIN-SUFFIX,grs.platform.dbankcloud.ru
++ DOMAIN-SUFFIX,hya.comp.360os.com
++ DOMAIN-SUFFIX,igexin.com
++ DOMAIN-SUFFIX,imag8.pubmatic.com
++ DOMAIN-SUFFIX,imag86.pubmatic.com
++ DOMAIN-SUFFIX,imageplus.baidu.com
++ DOMAIN-SUFFIX,img.adnyg.com
++ DOMAIN-SUFFIX,itv2-up.openspeech.cn
++ DOMAIN-SUFFIX,kuiniuca.com
++ DOMAIN-SUFFIX,log.avlyun.sec.intl.miui.com
++ DOMAIN-SUFFIX,m-adnet.hiaiabc.com
++ DOMAIN-SUFFIX,m.kubiqq.com
++ DOMAIN-SUFFIX,metrics.apple.com
++ DOMAIN-SUFFIX,mine.baidu.com
++ DOMAIN-SUFFIX,mobileservice.cn
++ DOMAIN-SUFFIX,notify.sec.miui.com
++ DOMAIN-SUFFIX,p1-be-pack-sign.pglstatp-toutiao.com
++ DOMAIN-SUFFIX,p2-be-pack-sign.pglstatp-toutiao.com
++ DOMAIN-SUFFIX,p4-be-pack-sign.pglstatp-toutiao.com
++ DOMAIN-SUFFIX,p5-be-pack-sign.pglstatp-toutiao.com
++ DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
++ DOMAIN-SUFFIX,pcdn.yximgs.com
++ DOMAIN-SUFFIX,pglstatp-toutiao.com
++ DOMAIN-SUFFIX,qwapi.apple.com
++ DOMAIN-SUFFIX,res.hubcloud.com.cn
++ DOMAIN-SUFFIX,res2.hubcloud.com.cn
++ DOMAIN-SUFFIX,res3.hubcloud.com.cn
++ DOMAIN-SUFFIX,rev.aiclk.com
++ DOMAIN-SUFFIX,s1.qq.com
++ DOMAIN-SUFFIX,s2.qq.com
++ DOMAIN-SUFFIX,s3.qq.com
++ DOMAIN-SUFFIX,sdk.cferw.com
++ DOMAIN-SUFFIX,sdownload.stargame.com
++ DOMAIN-SUFFIX,sigmob.cn
++ DOMAIN-SUFFIX,smart-tv.cn
++ DOMAIN-SUFFIX,staging-notify.sec.miui.com
++ DOMAIN-SUFFIX,t.l.qq.com
++ DOMAIN-SUFFIX,t002.ottcn.com
++ DOMAIN-SUFFIX,test.e.ad.xiaomi.com
++ DOMAIN-SUFFIX,tnc3-aliec1.toutiaoapi.com
++ DOMAIN-SUFFIX,tnc3-alisc2.zijieapi.com
++ DOMAIN-SUFFIX,umsns.com
++ DOMAIN-SUFFIX,www42.zskwai.com
++ DOMAIN-SUFFIX,xcultur.com
++ DOMAIN-SUFFIX,xlivrdr.com
++ DOMAIN-SUFFIX,xlmzc.cnjp-exp.com
++ DOMAIN-SUFFIX,youxi.kugou.com
+```
+
 ### 2025-05-13 12:22:38
 
 ```diff
