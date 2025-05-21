@@ -7,6 +7,37 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-05-22 00:18:56
+
+```diff
+- DOMAIN-SUFFIX,ad.xiaomi.com
+- DOMAIN-SUFFIX,adkwai.com
++ DOMAIN-SUFFIX,adks.hpplay.cn
+- DOMAIN-SUFFIX,adukwai.com
++ DOMAIN-SUFFIX,analytics.adjust.cn
+- DOMAIN-SUFFIX,appcloud2.in.zhihu.com
++ DOMAIN-SUFFIX,appversion.115.com
+- DOMAIN-SUFFIX,ata-sdk-uuid-report.dreport.meituan.net
+- DOMAIN-SUFFIX,dutils.com
+- DOMAIN-SUFFIX,getui.net
+- DOMAIN-SUFFIX,googletagservices.com
+- DOMAIN-SUFFIX,grs.platform.dbankcloud.ru
+- DOMAIN-SUFFIX,hya.comp.360os.com
+- DOMAIN-SUFFIX,igexin.com
+- DOMAIN-SUFFIX,kuiniuca.com
+- DOMAIN-SUFFIX,metrics.apple.com
+- DOMAIN-SUFFIX,mobileservice.cn
+- DOMAIN-SUFFIX,qwapi.apple.com
+- DOMAIN-SUFFIX,s1.qq.com
+- DOMAIN-SUFFIX,s2.qq.com
+- DOMAIN-SUFFIX,s3.qq.com
+- DOMAIN-SUFFIX,scdown.qq.com
+- DOMAIN-SUFFIX,umsns.com
+- DOMAIN-SUFFIX,xlivrdr.com
+- DOMAIN-SUFFIX,xlmzc.cnjp-exp.com
+- DOMAIN-SUFFIX,youxi.kugou.com
+```
+
 ### 2025-05-20 00:18:42
 
 ```diff
