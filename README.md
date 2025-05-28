@@ -7,6 +7,51 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-05-29 00:17:43
+
+```diff
+- DOMAIN-SUFFIX,.*.*.shouji.sogou.com
+- DOMAIN-SUFFIX,.*.1rtb.com
+- DOMAIN-SUFFIX,.*.a.market.xiaomi.com
+- DOMAIN-SUFFIX,.*.ad.gameley.com
+- DOMAIN-SUFFIX,.*.adintl.cn
+- DOMAIN-SUFFIX,.*.adx.adwangmai.com
+- DOMAIN-SUFFIX,.*.data.hicloud.com
+- DOMAIN-SUFFIX,.*.log.aliyuncs.com
+- DOMAIN-SUFFIX,.*.ubixioe.com
+- DOMAIN-SUFFIX,.*.vlion.cn
+- DOMAIN-SUFFIX,.*.yfanads.com
+- DOMAIN-SUFFIX,.*.zhangyuyidong.cn
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad-[a-zA-Z0-9.-]*.byteimg.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.sm.cn
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.video.yximgs.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.wtzw.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-be-pack-sign.pglstatp-toutiao.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-normal-[a-zA-Z0-9.-]*.zijieapi.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-normal.zijieapi.com
+- DOMAIN-SUFFIX,cloudinject[a-zA-Z0-9.-]*-dev.*.[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*.amazonaws.com
++ DOMAIN-SUFFIX,.*.*.shouji.sogou.com
++ DOMAIN-SUFFIX,.*.1rtb.com
++ DOMAIN-SUFFIX,.*.a.market.xiaomi.com
++ DOMAIN-SUFFIX,.*.ad.gameley.com
++ DOMAIN-SUFFIX,.*.adintl.cn
++ DOMAIN-SUFFIX,.*.adx.adwangmai.com
++ DOMAIN-SUFFIX,.*.data.hicloud.com
++ DOMAIN-SUFFIX,.*.log.aliyuncs.com
++ DOMAIN-SUFFIX,.*.ubixioe.com
++ DOMAIN-SUFFIX,.*.vlion.cn
++ DOMAIN-SUFFIX,.*.yfanads.com
++ DOMAIN-SUFFIX,.*.zhangyuyidong.cn
++ DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad-[a-zA-Z0-9.-]*.byteimg.com
++ DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.sm.cn
++ DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.video.yximgs.com
++ DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.wtzw.com
++ DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-be-pack-sign.pglstatp-toutiao.com
++ DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-normal-[a-zA-Z0-9.-]*.zijieapi.com
++ DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-normal.zijieapi.com
++ DOMAIN-SUFFIX,cloudinject[a-zA-Z0-9.-]*-dev.*.[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*-[a-zA-Z0-9.-]*.amazonaws.com
+```
+
 ### 2025-05-22 00:18:56
 
 ```diff
