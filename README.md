@@ -7,6 +7,15 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-05-31 00:18:39
+
+```diff
++ DOMAIN-SUFFIX,8rn1y79f02-1.algolianet.com
++ DOMAIN-SUFFIX,ad-splash-tracking.hktvmall.com
++ DOMAIN-SUFFIX,ad-splash.hktvmall.com
++ DOMAIN-SUFFIX,live-api.hktvmall.com
+```
+
 ### 2025-05-29 00:17:43
 
 ```diff
