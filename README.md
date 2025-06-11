@@ -7,6 +7,12 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-06-12 00:19:23
+
+```diff
++ DOMAIN-SUFFIX,sdk.adx.adwangmai.com
+```
+
 ### 2025-05-31 00:18:39
 
 ```diff
