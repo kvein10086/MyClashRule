@@ -7,6 +7,15 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-06-19 00:19:12
+
+```diff
++ DOMAIN-SUFFIX,data-sdk-uuid-log.d.meituan.net
++ DOMAIN-SUFFIX,h5.analytics.126.net
++ DOMAIN-SUFFIX,log.iflytek.com
++ DOMAIN-SUFFIX,sentry.music.163.com
+```
+
 ### 2025-06-13 00:18:51
 
 ```diff
