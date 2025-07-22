@@ -7,6 +7,42 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-07-23 00:20:00
+
+```diff
+- DOMAIN-SUFFIX,ad-sdk.huxiu.com
+- DOMAIN-SUFFIX,ad2.ettoday.net
+- DOMAIN-SUFFIX,adfstat.yandex.ru
+- DOMAIN-SUFFIX,ads.flurry.com
+- DOMAIN-SUFFIX,ads.music.126.net
+- DOMAIN-SUFFIX,adv.fjtv.net
++ DOMAIN-SUFFIX,adx-bj-req.anythinktech.com
+- DOMAIN-SUFFIX,applvn.com
+- DOMAIN-SUFFIX,cdn.ad.xiaomi.com
+- DOMAIN-SUFFIX,imag8.pubmatic.com
+- DOMAIN-SUFFIX,imag86.pubmatic.com
+- DOMAIN-SUFFIX,imageplus.baidu.com
+- DOMAIN-SUFFIX,img.adnyg.com
+- DOMAIN-SUFFIX,log.avlyun.sec.intl.miui.com
+- DOMAIN-SUFFIX,log.snssdk.com
+- DOMAIN-SUFFIX,m.kubiqq.com
++ DOMAIN-SUFFIX,mcs.zijieapi.com
+- DOMAIN-SUFFIX,mime.baidu.com
+- DOMAIN-SUFFIX,mine.baidu.com
++ DOMAIN-SUFFIX,promotion-partner.kuaishou.com
++ DOMAIN-SUFFIX,telecome.cn
++ DOMAIN-SUFFIX,tnc0-aliec2.zijieapi.com
++ DOMAIN-SUFFIX,tnc0-alisc1.zijieapi.com
++ DOMAIN-SUFFIX,tnc0-bjlgy.zijieapi.com
++ DOMAIN-SUFFIX,tnc3-aliec2.snssdk.com
++ DOMAIN-SUFFIX,tnc3-aliec2.zijieapi.com
++ DOMAIN-SUFFIX,tnc3-alisc1.snssdk.com
++ DOMAIN-SUFFIX,tnc3-alisc1.toutiaoapi.com
++ DOMAIN-SUFFIX,tnc3-bjlgy.snssdk.com
+- DOMAIN-SUFFIX,www42.zskwai.com
+- DOMAIN-SUFFIX,xcultur.com
+```
+
 ### 2025-07-15 00:20:20
 
 ```diff
