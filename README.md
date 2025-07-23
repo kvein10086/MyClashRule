@@ -7,6 +7,20 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-07-24 00:20:15
+
+```diff
++ DOMAIN-SUFFIX,aem.dentsuchina.cn
++ DOMAIN-SUFFIX,alicoccdncnc-xn.inter.71edge.com
++ DOMAIN-SUFFIX,alicoccdnct-xn.inter.71edge.com
++ DOMAIN-SUFFIX,bdcdncnc.inter.71edge.com
++ DOMAIN-SUFFIX,img2.360buyimg.com
++ DOMAIN-SUFFIX,m.iqiyipic.com
++ DOMAIN-SUFFIX,static-s.iqiyi.com
++ DOMAIN-SUFFIX,yk-ssp-ad.cp31.ott.cibntv.net
++ DOMAIN-SUFFIX,ykad-data.cp31.ott.cibntv.net
+```
+
 ### 2025-07-23 00:20:00
 
 ```diff
