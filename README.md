@@ -7,6 +7,12 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-07-29 00:20:52
+
+```diff
+- DOMAIN-SUFFIX,vali-ugc.cp31.ott.cibntv.net
+```
+
 ### 2025-07-27 00:17:51
 
 ```diff
