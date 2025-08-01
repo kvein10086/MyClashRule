@@ -71,18 +71,77 @@ jobs:
           # 创建新的日志内容
           echo -e "### ${LOG_DATE}\n\n\`\`\`diff\n${DIFF_CONTENT}\n\`\`\`\n" > temp/new_log.txt
           
-          # 更新 README.md
-          awk -v log_start="## 广告规则更新日志" -v new_log="$(cat temp/new_log.txt)" '
-            BEGIN {printed=0}
-            $0 ~ log_start {
-              print $0
-              print ""
-              print new_log
-              printed=1
+          # 提取README中日志部分之前的内容
+          sed -n '1,/^## 广告规则更新日志$/p' README.md > temp/readme_header.txt
+          
+          # 提取现有的第一条日志（最近的一条）
+          awk '
+            BEGIN { in_log=0; log_count=0; current_entry="" }
+            /^## 广告规则更新日志/ { in_log=1; next }
+            /^##/ && in_log { exit }
+            in_log && /^### / { 
+              if (log_count == 0) {
+                current_entry = $0 "\n"
+                log_count++
+              } else if (log_count == 1) {
+                print current_entry
+                exit
+              }
               next
             }
-            {print}
-          ' README.md > temp/README.new && mv temp/README.new README.md
+            in_log && log_count == 1 { current_entry = current_entry $0 "\n" }
+          ' README.md > temp/recent_log.txt
+          
+          # 提取所有历史日志（第2条及以后的所有日志）
+          awk '
+            BEGIN { in_log=0; log_count=0; in_history=0 }
+            /^## 广告规则更新日志/ { in_log=1; next }
+            /^##/ && in_log { exit }
+            in_log && /^### / { 
+              log_count++
+              if (log_count >= 2) {
+                in_history = 1
+              }
+            }
+            in_log && in_history { print }
+          ' README.md > temp/history_logs.txt
+          
+          # 提取日志部分之后的内容
+          awk '
+            BEGIN { in_log=0; after_log=0 }
+            /^## 广告规则更新日志/ { in_log=1; next }
+            /^##/ && in_log { after_log=1; in_log=0 }
+            after_log { print }
+          ' README.md > temp/readme_footer.txt
+          
+          # 重新构建 README.md
+          cat temp/readme_header.txt > temp/README.new
+          echo "" >> temp/README.new
+          
+          # 添加新日志
+          cat temp/new_log.txt >> temp/README.new
+          
+          # 添加最近一条历史日志
+          if [ -s temp/recent_log.txt ]; then
+            cat temp/recent_log.txt >> temp/README.new
+          fi
+          
+          # 添加折叠的历史日志
+          if [ -s temp/history_logs.txt ]; then
+            echo "<details>" >> temp/README.new
+            echo "<summary>📋 查看历史更新日志</summary>" >> temp/README.new
+            echo "" >> temp/README.new
+            cat temp/history_logs.txt >> temp/README.new
+            echo "</details>" >> temp/README.new
+            echo "" >> temp/README.new
+          fi
+          
+          # 添加日志部分之后的内容
+          if [ -s temp/readme_footer.txt ]; then
+            cat temp/readme_footer.txt >> temp/README.new
+          fi
+          
+          mv temp/README.new README.md
 
       - name: Commit and push changes
         if: steps.compare.outputs.status == 'change'
