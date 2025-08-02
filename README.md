@@ -7,6 +7,40 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-08-03 00:18:17
+
+```diff
+- DOMAIN-SUFFIX,.*.1rtb.com
+- DOMAIN-SUFFIX,.*.a.market.xiaomi.com
+- DOMAIN-SUFFIX,.*.ad.gameley.com
+- DOMAIN-SUFFIX,.*.adintl.cn
+- DOMAIN-SUFFIX,.*.adx.adwangmai.com
+- DOMAIN-SUFFIX,.*.data.hicloud.com
+- DOMAIN-SUFFIX,.*.log.aliyuncs.com
+- DOMAIN-SUFFIX,.*.ubixioe.com
+- DOMAIN-SUFFIX,.*.vlion.cn
+- DOMAIN-SUFFIX,.*.yfanads.com
+- DOMAIN-SUFFIX,.*.zhangyuyidong.cn
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad-[a-zA-Z0-9.-]*.byteimg.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.sm.cn
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.video.yximgs.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-ad.wtzw.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-be-pack-sign.pglstatp-toutiao.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-normal-[a-zA-Z0-9.-]*.zijieapi.com
+- DOMAIN-SUFFIX,[a-zA-Z0-9.-]*-normal.zijieapi.com
++ DOMAIN-SUFFIX,+.1rtb.com
++ DOMAIN-SUFFIX,+.a.market.xiaomi.com
++ DOMAIN-SUFFIX,+.ad.gameley.com
++ DOMAIN-SUFFIX,+.adintl.cn
++ DOMAIN-SUFFIX,+.adx.adwangmai.com
++ DOMAIN-SUFFIX,+.data.hicloud.com
++ DOMAIN-SUFFIX,+.log.aliyuncs.com
++ DOMAIN-SUFFIX,+.ubixioe.com
++ DOMAIN-SUFFIX,+.vlion.cn
++ DOMAIN-SUFFIX,+.yfanads.com
++ DOMAIN-SUFFIX,+.zhangyuyidong.cn
+```
+
 ### 2025-07-31 00:20:23
 
 ```diff
