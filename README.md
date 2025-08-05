@@ -7,6 +7,12 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-08-06 00:17:31
+
+```diff
++ DOMAIN-SUFFIX,mobilead.kuwo.cn
+```
+
 ### 2025-08-03 00:18:17
 
 ```diff
