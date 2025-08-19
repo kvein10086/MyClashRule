@@ -7,6 +7,14 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-08-20 00:18:59
+
+```diff
++ DOMAIN-SUFFIX,hlog.bigda.com
++ DOMAIN-SUFFIX,mlog.bigda.com
++ DOMAIN-SUFFIX,union-mlog.bigda.com
+```
+
 ### 2025-08-19 00:19:51
 
 ```diff
