@@ -7,6 +7,12 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-08-24 00:15:32
+
+```diff
++ DOMAIN-SUFFIX,ap.dongdianqiu.com
+```
+
 ### 2025-08-20 00:18:59
 
 ```diff
