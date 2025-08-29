@@ -7,6 +7,12 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-08-30 00:17:31
+
+```diff
+- DOMAIN-SUFFIX,android.bugly.qq.com
+```
+
 ### 2025-08-24 00:15:32
 
 ```diff
