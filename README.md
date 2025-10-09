@@ -7,6 +7,13 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-10-10 00:19:30
+
+```diff
++ DOMAIN-SUFFIX,browser.events.data.msn.cn
++ DOMAIN-SUFFIX,browser.events.data.msn.com
+```
+
 ### 2025-08-30 00:17:31
 
 ```diff
