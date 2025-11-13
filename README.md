@@ -7,6 +7,39 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-11-14 00:18:58
+
+```diff
++ DOMAIN-SUFFIX,ad.shunchangzhixing.com
+- DOMAIN-SUFFIX,adservice.google.cn
++ DOMAIN-SUFFIX,api.aqyad.com
++ DOMAIN-SUFFIX,api.shanghailingye.cn
++ DOMAIN-SUFFIX,aqyad.com
+- DOMAIN-SUFFIX,cctv.adsunion.com
+- DOMAIN-SUFFIX,cj.qidian.com
++ DOMAIN-SUFFIX,cloooud.com
+- DOMAIN-SUFFIX,cws-cctv.conviva.com
++ DOMAIN-SUFFIX,fancyapi.com
++ DOMAIN-SUFFIX,g.fancyapi.com
+- DOMAIN-SUFFIX,googleads.g.doubleclick.com
+- DOMAIN-SUFFIX,itv2-up.openspeech.cn
++ DOMAIN-SUFFIX,l6.fancyapi.com
++ DOMAIN-SUFFIX,lftxali.fancyapi.com
++ DOMAIN-SUFFIX,openadapi.fancydsp.com
+- DOMAIN-SUFFIX,rev.aiclk.com
+- DOMAIN-SUFFIX,sanme2.taisantech.com
++ DOMAIN-SUFFIX,sdk.aqyad.com
++ DOMAIN-SUFFIX,sdkapi.cloooud.com
+- DOMAIN-SUFFIX,sigmob.cn
+- DOMAIN-SUFFIX,smart-tv.cn
++ DOMAIN-SUFFIX,ssp.cloooud.com
++ DOMAIN-SUFFIX,statichf.shihuocdn.cn
++ DOMAIN-SUFFIX,t2.fancyapi.com
++ DOMAIN-SUFFIX,tnc3-aliec2.zijieapi.com
++ DOMAIN-SUFFIX,trace.aqyad.com
++ DOMAIN-SUFFIX,utoken.umeng.com
+```
+
 ### 2025-11-04 00:18:01
 
 ```diff
