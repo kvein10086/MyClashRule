@@ -7,6 +7,20 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-11-19 00:20:58
+
+```diff
++ DOMAIN-SUFFIX,adx-api.jinmo.tech
++ DOMAIN-SUFFIX,adx-saas.advlion.com
++ DOMAIN-SUFFIX,bj-td-menta-01-callback.advlion.com
++ DOMAIN-SUFFIX,c.etoolads.cn
++ DOMAIN-SUFFIX,monitor.adxsenmeng.com
++ DOMAIN-SUFFIX,qmlog.baertt.com
++ DOMAIN-SUFFIX,rtb.adxsenmeng.com
++ DOMAIN-SUFFIX,s1.cdn-sg.advlion.com
++ DOMAIN-SUFFIX,target.ads.jihuoniao.com
+```
+
 ### 2025-11-14 00:18:58
 
 ```diff
