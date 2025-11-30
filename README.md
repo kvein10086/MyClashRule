@@ -7,6 +7,38 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-12-01 00:17:45
+
+```diff
++ DOMAIN-SUFFIX,ad.iot.360.cn
++ DOMAIN-SUFFIX,ad.jia.360.cn
++ DOMAIN-SUFFIX,ad.life.360.cn
++ DOMAIN-SUFFIX,ad.shenshiads.com
++ DOMAIN-SUFFIX,ad.xunkids.com
++ DOMAIN-SUFFIX,adashxgc.ut.taobao.com
++ DOMAIN-SUFFIX,ads.cup.com.cn
++ DOMAIN-SUFFIX,adv-api.shenshiads.com
++ DOMAIN-SUFFIX,analytics.oceanengine.com
++ DOMAIN-SUFFIX,api-ad-data.kajicam.com
++ DOMAIN-SUFFIX,api-ad.kajicam.com
++ DOMAIN-SUFFIX,applog-perf.uc.cn
++ DOMAIN-SUFFIX,engine.dcad01.com
++ DOMAIN-SUFFIX,iadmusicmat.music.126.net
++ DOMAIN-SUFFIX,log.ireader.com
++ DOMAIN-SUFFIX,logrcv.yunxish.com
++ DOMAIN-SUFFIX,logwebs.kugou.com
++ DOMAIN-SUFFIX,m.shenshiads.com
++ DOMAIN-SUFFIX,mobilelog.kugou.com
++ DOMAIN-SUFFIX,open-set-api.shenshiads.com
++ DOMAIN-SUFFIX,p66-ad.adkwai.com
++ DOMAIN-SUFFIX,safebrowsing.googleapis.com
++ DOMAIN-SUFFIX,safebrowsing.urlsec.gg.com
++ DOMAIN-SUFFIX,sdkreport.e.qq.com
++ DOMAIN-SUFFIX,tracelog-debug.yunxish.com
++ DOMAIN-SUFFIX,xcx.dcad01.com
++ DOMAIN-SUFFIX,zjres-ad.kajicam.com
+```
+
 ### 2025-11-19 00:20:58
 
 ```diff
