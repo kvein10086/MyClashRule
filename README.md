@@ -7,6 +7,15 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2025-12-24 00:20:57
+
+```diff
++ DOMAIN-SUFFIX,adtracker.medproad.com
++ DOMAIN-SUFFIX,medproad.com
++ DOMAIN-SUFFIX,qcwx.medproad.com
++ DOMAIN-SUFFIX,t-adx.52qumao.com
+```
+
 ### 2025-12-22 00:18:03
 
 ```diff
