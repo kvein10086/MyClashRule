@@ -7,6 +7,20 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-01-28 00:24:21
+
+```diff
++ DOMAIN-SUFFIX,ad.weibo.com
++ DOMAIN-SUFFIX,adimg.uve.weibo.com
++ DOMAIN-SUFFIX,adstrategy.biz.weibo.com
++ DOMAIN-SUFFIX,adui.tg.meitu.com
++ DOMAIN-SUFFIX,adx-strategy-api-cn.statisticslinks.com
++ DOMAIN-SUFFIX,mores.toponad.com
++ DOMAIN-SUFFIX,sdkapp.uve.weibo.com
++ DOMAIN-SUFFIX,tagtic.cn
++ DOMAIN-SUFFIX,tuiguang.meitu.com
+```
+
 ### 2026-01-16 00:28:53
 
 ```diff
