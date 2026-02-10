@@ -7,6 +7,12 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-02-11 00:58:00
+
+```diff
+- DOMAIN-SUFFIX,m1.ad.10010.com
+```
+
 ### 2026-01-29 00:30:10
 
 ```diff
