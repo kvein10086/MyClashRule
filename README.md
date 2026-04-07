@@ -7,6 +7,13 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-04-08 00:51:31
+
+```diff
++ DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao-b.com
++ DOMAIN-SUFFIX,mobile.events.data.microsoft.com
+```
+
 ### 2026-02-11 00:58:00
 
 ```diff
