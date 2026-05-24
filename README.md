@@ -7,6 +7,13 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-05-25 00:55:21
+
+```diff
++ DOMAIN-SUFFIX,adsfs.heytapimage.com
+- DOMAIN-SUFFIX,drcn-weather.cloud.huawei.com
+```
+
 ### 2026-04-08 00:51:31
 
 ```diff
