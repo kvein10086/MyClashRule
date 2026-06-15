@@ -7,6 +7,17 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-06-16 03:41:59
+
+```diff
+- DOMAIN-SUFFIX,tnc0-aliec2.zijieapi.com
+- DOMAIN-SUFFIX,tnc0-alisc1.zijieapi.com
+- DOMAIN-SUFFIX,tnc3-aliec2.zijieapi.com
+- DOMAIN-SUFFIX,tnc3-alisc1.zijieapi.com
+- DOMAIN-SUFFIX,tnc3-alisc2.zijieapi.com
+- DOMAIN-SUFFIX,tnc3-bjlgy.zijieapi.com
+```
+
 ### 2026-05-25 00:55:21
 
 ```diff
