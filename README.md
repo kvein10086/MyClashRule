@@ -7,6 +7,13 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-07-22 01:11:14
+
+```diff
+- DOMAIN-SUFFIX,dig.bdurl.net
+- DOMAIN-SUFFIX,mcs.zijieapi.com
+```
+
 ### 2026-06-16 03:41:59
 
 ```diff
