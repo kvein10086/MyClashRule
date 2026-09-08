@@ -7,6 +7,57 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-09-09 03:11:55
+
+```diff
++ DOMAIN-SUFFIX,ad-api.4pyun.com
++ DOMAIN-SUFFIX,ad-files.4pyun.com
++ DOMAIN-SUFFIX,ad.bn.netease.com
++ DOMAIN-SUFFIX,ad.duoduo.link
++ DOMAIN-SUFFIX,ad.maoyan.com
++ DOMAIN-SUFFIX,ad.player.baidu.com
++ DOMAIN-SUFFIX,ad4.sina.com.cn
++ DOMAIN-SUFFIX,adash-emas.cn-hangzhou.aliyuncs.com
++ DOMAIN-SUFFIX,adbox.sina.com.cn
++ DOMAIN-SUFFIX,adcanvas.com
++ DOMAIN-SUFFIX,admarketing.yahoo.net
++ DOMAIN-SUFFIX,admobile.top
++ DOMAIN-SUFFIX,ads-shopping.shouqianba.com
++ DOMAIN-SUFFIX,ads.finance.yahoo.com
++ DOMAIN-SUFFIX,ads.ishansong.com
++ DOMAIN-SUFFIX,adscdn.baidu.com
++ DOMAIN-SUFFIX,adsmoloco.com
++ DOMAIN-SUFFIX,adspecs.yahoo.com
++ DOMAIN-SUFFIX,adstextview.qq.com
++ DOMAIN-SUFFIX,adx-os.bridgeoos.com
++ DOMAIN-SUFFIX,alltbcsp2p.baidu.com
++ DOMAIN-SUFFIX,commercial.shouji.360.cn
++ DOMAIN-SUFFIX,eventv1.leidong.rayenergytech.com
++ DOMAIN-SUFFIX,gw5.push.mcp.weibo.cn
++ DOMAIN-SUFFIX,gw6.push.mcp.weibo.cn
++ DOMAIN-SUFFIX,huodong.ios.shouji.360.cn
++ DOMAIN-SUFFIX,huodong.weibo.cn
++ DOMAIN-SUFFIX,iadcontent.apple.com
++ DOMAIN-SUFFIX,iadmoo.apple.com
++ DOMAIN-SUFFIX,init.supersonicads.com
++ DOMAIN-SUFFIX,inner-hw.huazirc.com
++ DOMAIN-SUFFIX,kwpush.kuwo.cn
++ DOMAIN-SUFFIX,logs-bigdata.yeehaw.com.cn
++ DOMAIN-SUFFIX,logv2.ireader.com
++ DOMAIN-SUFFIX,lookup.api.bsb.baidu.com
++ DOMAIN-SUFFIX,m1.ad.10010.com
++ DOMAIN-SUFFIX,prom-sdkv2.jysper.net
++ DOMAIN-SUFFIX,report.dxunion.cn
++ DOMAIN-SUFFIX,report.tencentmusic.com
++ DOMAIN-SUFFIX,tracker-prd.aldi.com.cn
++ DOMAIN-SUFFIX,union-record.oss-cn-zhangjiakou.aliyuncs.com
++ DOMAIN-SUFFIX,unityads.unity3d.com
++ DOMAIN-SUFFIX,ws.tapjoyads.com
++ DOMAIN-SUFFIX,yumao.puata.info
++ DOMAIN-SUFFIX,+.adsmoloco.com
++ DOMAIN-SUFFIX,+.unityads.unity3d.com
+```
+
 ### 2026-08-21 00:27:29
 
 ```diff
