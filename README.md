@@ -7,6 +7,22 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-09-10 03:00:19
+
+```diff
+- DOMAIN-SUFFIX,ad.weibo.com
++ DOMAIN-SUFFIX,adlog.vivo.com.cn
++ DOMAIN-SUFFIX,adreq.vivo.com.cn
++ DOMAIN-SUFFIX,adxlog.vivo.com.cn
++ DOMAIN-SUFFIX,adxstatic.vivo.com.cn
++ DOMAIN-SUFFIX,brandadsstatic.vivo.com.cn
++ DOMAIN-SUFFIX,dsplog-adnet.vivo.com.cn
+- DOMAIN-SUFFIX,iadworkbench.apple.com
+- DOMAIN-SUFFIX,safebrowsing.urlsec.gg.com
++ DOMAIN-SUFFIX,safebrowsing.urlsec.qq.com
++ DOMAIN-SUFFIX,tracking-adnet.vivo.com.cn
+```
+
 ### 2026-09-09 03:11:55
 
 ```diff
