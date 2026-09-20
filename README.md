@@ -7,6 +7,22 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-09-21 02:26:03
+
+```diff
++ DOMAIN-SUFFIX,adm.zhangyuyidong.cn
++ DOMAIN-SUFFIX,adsmartget.datads.cn
++ DOMAIN-SUFFIX,de.ad.gameley.com
++ DOMAIN-SUFFIX,jp.ad.gameley.com
++ DOMAIN-SUFFIX,mpcfg.fancydsp.com
++ DOMAIN-SUFFIX,sdk-track.66mobi.com
++ DOMAIN-SUFFIX,sdk.adhuanxiao.com
++ DOMAIN-SUFFIX,sdk.hzzfcm.com
++ DOMAIN-SUFFIX,sdk.zhangyuyidong.cn
++ DOMAIN-SUFFIX,sdklog.zhangyuyidong.cn
++ DOMAIN-SUFFIX,xadsmartget.adgain.cn
+```
+
 ### 2026-09-10 03:00:19
 
 ```diff
