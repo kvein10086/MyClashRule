@@ -7,6 +7,13 @@ https://raw.githubusercontent.com/kvein10086/MyClashRule/main/MyClashRule.ini
 
 ## 广告规则更新日志
 
+### 2026-09-22 04:13:41
+
+```diff
++ DOMAIN-SUFFIX,pica-a-display.diwodiwo.xyz
++ DOMAIN-SUFFIX,pica-ad-api.diwodiwo.xyz
+```
+
 ### 2026-09-21 02:26:03
 
 ```diff
